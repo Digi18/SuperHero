@@ -14,7 +14,7 @@ steps:
 
 #Deploy
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy','[myapp/app.yaml]']
+  args: ['app', 'deploy','myapp\app.yaml']
   
   
   

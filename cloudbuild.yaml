@@ -14,5 +14,7 @@ steps:
 
 #Deploy
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy','[yaml/app.yaml]']
+  args: ['app', 'deploy']
+  env: flex
+  runtime: nodejs
   

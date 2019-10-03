@@ -9,8 +9,8 @@ steps:
 #  args: ['run', 'test:unit']  
 
 #Build
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'build']  
+#- name: 'gcr.io/cloud-builders/gcloud'
+#  args: ['run', 'build']  
 
 #Deploy
 - name: 'gcr.io/cloud-builders/gcloud'

@@ -17,7 +17,7 @@ router.get('/',(req,res) => {
            	console.log("Error",err);
            }else{
 
-           	var collection = client.db('Kotlin_db').collection('');
+           	var collection = client.db('Kotlin_db').collection('Superheros');
               
             collection.insertOne({hero:hero,movie:movie}).then((response) => {
 

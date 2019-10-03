@@ -5,8 +5,8 @@ steps:
   args: ['clone', 'https://github.com/GoogleCloudPlatform/cloud-builders']
 
 #Test
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'test:unit']  
+# - name: 'gcr.io/cloud-builders/gcloud'
+#  args: ['run', 'test:unit']  
 
 #Build
 - name: 'gcr.io/cloud-builders/gcloud'

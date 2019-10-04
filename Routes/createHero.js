@@ -12,8 +12,9 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.post('/createHero',(req,res) => {
 
 
-           const superhero = req.body.hero;
            const movie = req.body.movie;
+           const superhero = req.body.hero;
+           
 
 
    MongoClient.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client) => {

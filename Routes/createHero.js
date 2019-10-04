@@ -12,12 +12,10 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.post('/createHero',(req,res) => {
 
 
+           const superhero = req.body.hero;      
            const movie = req.body.movie;
-         //  const superhero = req.body.hero;
            
-
-
-   MongoClient.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client) => {
+           MongoClient.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client) => {
 
           
            if(err){
@@ -26,7 +24,7 @@ router.post('/createHero',(req,res) => {
 
            	var collection = client.db('Kotlin_db').collection('Superheros');
               
-            collection.insertOne({movie:movie}).then((response) => {
+            collection.insertOne({name:superhero,movie:movie}).then((response) => {
 
                  res.send("Data added successfully");
 

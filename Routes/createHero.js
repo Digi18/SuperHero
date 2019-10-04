@@ -9,7 +9,7 @@ const dburl = process.env.URL;
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
 
-router.post('/',(req,res) => {
+router.post('/createHero',(req,res) => {
 
            const hero = req.body.hero;
            const movie = req.body.movie;

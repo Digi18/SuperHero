@@ -3,8 +3,8 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.use(require('./Routes/createHero'));
-app.use(require('./Routes/getHero'));
+app.use(require('./Routes/createHero.js'));
+app.use(require('./Routes/getHero.js'));
 
 app.listen(port,(req,res) => {
 

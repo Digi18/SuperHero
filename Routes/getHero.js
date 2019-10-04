@@ -8,7 +8,8 @@ const dburl = process.env.URL;
 router.get('/getHero',(req,res) => {
 
 
-  MongoClient.connect(dburl,{useNewUrlPrser:true,useUnifiedTopology:true},(err,client) => {
+       res.send("Hello there");
+  /* MongoClient.connect(dburl,{useNewUrlPrser:true,useUnifiedTopology:true},(err,client) => {
 
                if(err){
                	console.log("Error",err);
@@ -16,7 +17,7 @@ router.get('/getHero',(req,res) => {
                	
                }
 
-    });
+    });  */
 
 
 });

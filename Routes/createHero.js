@@ -11,7 +11,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 router.post('/createHero',(req,res) => {
 
-           const hero = req.body.hero;
+           const superhero = req.body.hero;
            const movie = req.body.movie;
 
 
@@ -24,7 +24,7 @@ router.post('/createHero',(req,res) => {
 
            	var collection = client.db('Kotlin_db').collection('Superheros');
               
-            collection.insertOne({hero:hero,movie:movie}).then((response) => {
+            collection.insertOne({hero:superhero,movie:movie}).then((response) => {
 
                  res.send("Data added successfully");
 

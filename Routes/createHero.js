@@ -13,7 +13,7 @@ router.post('/createHero',(req,res) => {
 
 
            const movie = req.body.movie;
-           const superhero = req.body.hero;
+         //  const superhero = req.body.hero;
            
 
 
@@ -26,7 +26,7 @@ router.post('/createHero',(req,res) => {
 
            	var collection = client.db('Kotlin_db').collection('Superheros');
               
-            collection.insertOne({hero:superhero,movie:movie}).then((response) => {
+            collection.insertOne({movie:movie}).then((response) => {
 
                  res.send("Data added successfully");
 

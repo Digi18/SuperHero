@@ -11,6 +11,9 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 router.post('/createHero',(req,res) => {
 
+          try{
+
+
            const superhero = req.body.hero;
            const movie = req.body.movie;
 
@@ -36,6 +39,13 @@ router.post('/createHero',(req,res) => {
            	client.close();
            }
    });
+
+ }
+
+  catch(ex){
+
+    console.log(ex);
+  }
 
 });
 

@@ -8,11 +8,13 @@ const dburl = process.env.URL;
 
 router.get('/',(req,res) => {
 
-   MongoClient.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client) => {
-
            const hero = req.body.hero;
            const movie = req.body.movie;
 
+
+   MongoClient.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client) => {
+
+          
            if(err){
            	console.log("Error",err);
            }else{

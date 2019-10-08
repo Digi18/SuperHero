@@ -17,8 +17,7 @@ router.post('/createHero',(req,res) => {
            
            MongoClient.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client) => {
 
-          
-           if(err){
+          if(err){
            	console.log("Error",err);
            }else{
 
